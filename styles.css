@@ -22,28 +22,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .hero p { text-transform: uppercase; letter-spacing: .09em; color: #ff8277; }
 h1 { font-size: clamp(60px,8vw,118px); line-height: .96; letter-spacing: -.078em; margin: 12px 0 18px; }
 em { font-style: normal; }
-.hero-circuit { display: block; width: 100%; height: auto; max-height: 260px; }
-.circuit-wire { fill: none; stroke: #66615d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.circuit-switch { transform-origin: 185px 55px; animation: circuit-switch 4s step-end infinite; }
-.circuit-current { stroke: var(--accent); stroke-dasharray: 5 13; animation: circuit-on 4s step-end infinite, circuit-flow 1s linear infinite; }
-.circuit-bulb { fill: #252323; animation: circuit-bulb 4s step-end infinite; }
-.circuit-filament, .circuit-rays { stroke: #ffd477; }
-.circuit-filament { animation: circuit-filament 4s step-end infinite; }
-.circuit-glow, .circuit-rays, .circuit-on-label { animation: circuit-on 4s step-end infinite; }
-.circuit-labels { fill: var(--muted); font: 10px 'IBM Plex Mono', monospace; letter-spacing: 1px; }
-.circuit-on-label { fill: #ffd477; }
-.circuit-off-label { animation: circuit-off 4s step-end infinite; }
-@keyframes circuit-switch { 0%, 100% { transform: rotate(-28deg); } 50% { transform: rotate(0); } }
-@keyframes circuit-on { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
-@keyframes circuit-off { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-@keyframes circuit-bulb { 0%, 100% { fill: #252323; stroke: #66615d; } 50% { fill: #ffd477; stroke: #ffe8b0; } }
-@keyframes circuit-filament { 0%, 100% { stroke: #817567; } 50% { stroke: #fff5d9; } }
-@keyframes circuit-flow { to { stroke-dashoffset: -36; } }
-@media (prefers-reduced-motion: reduce) {
-  .hero-circuit * { animation: none; }
-  .circuit-current, .circuit-glow, .circuit-rays, .circuit-on-label { opacity: 0; }
-  .circuit-switch { transform: rotate(-28deg); }
-}
+.hero-garage { display: block; width: 100%; height: auto; max-height: 270px; }
 nav { position: sticky; z-index: 2; top: 0; display: flex; gap: 24px; overflow-x: auto; padding-inline: var(--gutter); background: var(--bg); border-block: 1px solid var(--line); }
 nav a { white-space: nowrap; font-size: 14px; padding-block: 15px; }
 main { padding: 0 var(--gutter) 50px; }
@@ -61,7 +40,7 @@ h3 { font-size: 20px; line-height: 1.17; letter-spacing: -.04em; margin: 5px 0; 
 article p { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 @media (max-width: 600px) {
   .hero { grid-template-columns: 1fr; gap: 6px; padding-block: 18px; }
-  .hero-circuit { max-height: 210px; }
+  .hero-garage { max-height: 230px; }
   .grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
   figure, figure img { height: 110px; }
   .info { padding: 10px; }
